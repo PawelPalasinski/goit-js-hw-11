@@ -24,6 +24,8 @@ const getBtn = document.querySelector(".search-form>button");
 //     getData();
 // });
 
+
+
 qSelected = document.querySelector(".search-form__input-container>input");
 
 const searchData = e => {
@@ -35,8 +37,15 @@ const searchData = e => {
         })
         .catch(error => {
             if (searchTerm !== '') {
-            console.log('no data to display')
-        }
+                console.log('no data to display')
+            }
         })
     e.preventDefault();
-}
+};
+
+// function dataFound(data) {
+//     const dataToDisplay = data.map({webformatURL} => `adres obrazka: ${webformatURL}`);
+//     return console.log(dataToDisplay);
+// }
+
+qSelected.addEventListener('input', searchData);
