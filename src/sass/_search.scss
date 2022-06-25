@@ -54,24 +54,5 @@ button[type="submit"] {
   border-radius: 2px;
   cursor: pointer;
   position: absolute;
-  left: 50%;
-  top: 25px;
-}
-
-@media only screen and (min-width: 370px) {
-  button[type="submit"] {
-    left: 70%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  button[type="submit"] {
-    left: 60%;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  button[type="submit"] {
-    left: 50%;
-  }
+  left: 110%;
 }
