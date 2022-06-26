@@ -1,9 +1,9 @@
-.search-form {
+.search-container {
   width: 100%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.89);
 
-  &__input-container {
+  &__form {
     position: absolute;
     left: 40%;
     top: 6%;
@@ -37,8 +37,8 @@
   }
 }
 
-.search-form__input-container input:focus ~ label,
-.search-form__input-container input:valid ~ label {
+.search-container__form input:focus ~ label,
+.search-container__form input:valid ~ label {
   top: -10px;
   font-size: 10px;
 }
