@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const searchContainer = document.querySelector('.search-container');
 const searchQuery = document.querySelector('input[name="searchQuery"]');
-const upBtn = document.querySelector('.up-btn');
+const closeBtn = document.querySelector('.close-btn');
 const searchForm = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loadBtn = document.querySelector('.load-more');
@@ -22,10 +22,10 @@ let perPage = 40;
 let page = 0;
 let name = searchQuery.value;
 
-// Needed to hide "load more" and "arrow up" buttons
+// Needed to hide "load more" and "close" buttons
 
 loadBtn.style.display = 'none';
-upBtn.style.display = 'none';
+closeBtn.style.display = 'none';
 
 // Fetch images from Pixabay API using Axios
 
@@ -58,11 +58,10 @@ async function eventHandler(e) {
         Notiflix.Notify.success(`Hooray! We found ${name.totalHits} images.`);
         renderGallery(name);
         new SimpleLightbox('.gallery a');
-        upBtn.style.display = 'block';
-        upBtn.addEventListener('click', () => {
-          searchContainer.scrollIntoView({
-            behavior: 'smooth',
-          });
+        closeBtn.style.display = 'block';
+        closeBtn.addEventListener('click', () => {
+          gallery.innerHTML = '';
+          closeBtn.style.display = 'none';
         });
 
         if (page < totalPages) {
