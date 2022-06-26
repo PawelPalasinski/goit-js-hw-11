@@ -1,58 +1,58 @@
 .search-container {
-  width: 100%;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.89);
-
+  background-image: url('/src/images/Pixabay-logo.svg');
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+  height: 80px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  & .logo > img {
+    max-width: 50px;
+    margin-left: 20px;
+  }
   &__form {
-    position: absolute;
-    left: 40%;
-    top: 6%;
-    transform: translate(-50%, -50%);
-
+    margin-left: 20px;
+    max-width: 700px;
+    height: 40px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-
-    margin-bottom: 25px;
-    & label {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      font-size: 16px;
-      color: #fff;
-      transition: all 0.5s ease-in-out;
-    }
+    border: 1px solid #fff;
     & input {
+      max-width: 370px;
+      padding: 10px 5px;
+      float: left;
+      color: #000;
       border: 0;
-      border-bottom: 1px solid #555;
       background: transparent;
-      width: 100%;
-      padding: 8px 0 5px 0;
-      font-size: 16px;
-      color: #fff;
+      border-radius: 3px 0 0 3px;
       &:focus {
-        border: none;
-        outline: none;
-        border-bottom: 1px solid #e74c3c;
+        outline: 0;
+        background: transparent;
+      }
+    }
+    & button {
+      position: relative;
+      float: right;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      color: #fff;
+      background: transparent;
+      border-left: 1px solid #fff;
+      border-radius: 0 3px 3px 0;
+      &:hover {
+        background: #fff;
+        color: #444;
+      }
+      &:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+      }
+      &:focus {
+        outline: 0;
       }
     }
   }
-}
-
-.search-container__form input:focus ~ label,
-.search-container__form input:valid ~ label {
-  top: -10px;
-  font-size: 10px;
-}
-
-button[type="submit"] {
-  color: #fff;
-  background-color: #e74c3c;
-  outline: none;
-  border: 0;
-  color: #fff;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 2px;
-  cursor: pointer;
-  position: absolute;
-  left: 110%;
 }
