@@ -134,7 +134,7 @@ function renderGallery(name) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
-// Load more button - function 
+// Load more button - function
 
 loadBtn.addEventListener(
   'click',
