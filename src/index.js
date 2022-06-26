@@ -7,7 +7,7 @@ import axios from 'axios';
 
 // HTML elements
 
-const searchingBox = document.querySelector('.searching-box');
+const searchContainer = document.querySelector('.search-container');
 const searchQuery = document.querySelector('input[name="searchQuery"]');
 const upBtn = document.querySelector('.up-btn');
 const searchForm = document.querySelector('#search-form');
@@ -60,7 +60,7 @@ async function eventHandler(e) {
         new SimpleLightbox('.gallery a');
         upBtn.style.display = 'block';
         upBtn.addEventListener('click', () => {
-          searchingBox.scrollIntoView({
+          searchContainer.scrollIntoView({
             behavior: 'smooth',
           });
         });
