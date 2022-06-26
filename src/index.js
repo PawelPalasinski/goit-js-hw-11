@@ -7,7 +7,6 @@ import axios from 'axios';
 
 // HTML elements
 
-const searchContainer = document.querySelector('.search-container');
 const searchQuery = document.querySelector('input[name="searchQuery"]');
 const closeBtn = document.querySelector('.close-btn');
 const searchForm = document.querySelector('#search-form');
@@ -104,28 +103,28 @@ function renderGallery(name) {
             <p class="info-item">
               <b class="material-symbols-outlined">thumb_up</b>
             </p>
-            <p class="info-counter">${hit.likes}</p>
+            <p class="info-counter">${hit.likes.toLocaleString()}</p>
           </div>
 
           <div class="info__box">
             <p class="info-item">
               <b class="material-symbols-outlined">visibility</b>
             </p>
-            <p class="info-counter">${hit.views}</p>
+            <p class="info-counter">${hit.views.toLocaleString()}</p>
           </div>
 
           <div class="info__box">
             <p class="info-item">
               <b class="material-symbols-outlined">forum</b>
             </p>
-            <p class="info-counter">${hit.comments}</p>
+            <p class="info-counter">${hit.comments.toLocaleString()}</p>
           </div>
 
           <div class="info__box">
             <p class="info-item">
               <b class="material-symbols-outlined">download</b>
             </p>
-            <p class="info-counter">${hit.downloads}</p>
+            <p class="info-counter">${hit.downloads.toLocaleString()}</p>
           </div>
 
         </div>
