@@ -5,6 +5,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 import axios from 'axios';
 
+import { preloader, fadeEffect } from './js/preloader';
+
+
 // HTML elements
 
 const searchQuery = document.querySelector('input[name="searchQuery"]');
@@ -155,3 +158,7 @@ loadBtn.addEventListener(
   },
   true
 );
+
+// Preloader
+
+window.addEventListener('load', fadeEffect);
