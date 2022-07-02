@@ -5,8 +5,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 import axios from 'axios';
 
-import { preloader, fadeEffect } from './js/preloader';
-
+import { fadeEffect } from './js/preloader';
 
 // HTML elements
 
