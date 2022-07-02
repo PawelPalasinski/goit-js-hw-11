@@ -3,9 +3,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
-import axios from 'axios';
 
 import { fadeEffect } from './js/preloader';
+import { fetchImages } from './js/fetchImages';
 
 // HTML elements
 
@@ -16,9 +16,6 @@ const gallery = document.querySelector('.gallery');
 const loadBtn = document.querySelector('.load-more');
 
 // Needed to query the Pixabay API
-
-const baseURL = 'https://pixabay.com/api/';
-const key = '28143013-44919de38ad9e5402793063fb';
 let perPage = 40;
 let page = 0;
 let name = searchQuery.value;
@@ -27,19 +24,6 @@ let name = searchQuery.value;
 
 loadBtn.style.display = 'none';
 closeBtn.style.display = 'none';
-
-// Fetch images from Pixabay API using Axios
-
-async function fetchImages(name, page) {
-  try {
-    const response = await axios.get(
-      `${baseURL}?key=${key}&q=${name}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`
-    );
-    return response.data;
-  } catch (error) {
-    console.log('ERROR: ' + error);
-  }
-}
 
 // Handling the "submit" button event
 
@@ -51,7 +35,7 @@ async function eventHandler(e) {
   page = 1;
   name = searchQuery.value;
 
-  fetchImages(name, page)
+  fetchImages(name, page, perPage)
     .then(name => {
       let totalPages = name.totalHits / perPage;
 
@@ -143,7 +127,7 @@ loadBtn.addEventListener(
   () => {
     name = searchQuery.value;
     page += 1;
-    fetchImages(name, page).then(name => {
+    fetchImages(name, page, perPage).then(name => {
       let totalPages = name.totalHits / perPage;
       renderGallery(name);
       new SimpleLightbox('.gallery a');
