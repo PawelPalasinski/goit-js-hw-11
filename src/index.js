@@ -69,7 +69,7 @@ async function eventHandler(e) {
 
 searchForm.addEventListener('submit', eventHandler);
 
-// Funktion for markup for HTML gallery element
+// Function for markup for HTML gallery element
 
 function renderGallery(name) {
   const markup = name.hits
