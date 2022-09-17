@@ -1,5 +1,5 @@
 # JavaScript 11th homework
 
-Pixabay image search
+Website for searching images Pixabay
 
 https://pawelpalasinski.github.io/goit-js-hw-11/
