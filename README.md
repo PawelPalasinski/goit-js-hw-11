@@ -1,3 +1,5 @@
+<div align="center">
+
 # Pixabay image search
 
 A simple website to search images on Pixabay
@@ -13,6 +15,8 @@ A simple website to search images on Pixabay
 
 ![VSC](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg) -->
 
-## 🌐 [Page](https://pawelpalasinski.github.io/goit-js-hw-11/)
+##  [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png" width="80px" alt="home page" border="0">](https://pawelpalasinski.github.io/goit-js-hw-11/)
 
 <img src="https://i.ibb.co/dJ2hkTN/pixabay-js.jpg" alt="pixabay-js" border="0">
+
+</div>
