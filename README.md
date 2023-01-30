@@ -1,6 +1,6 @@
 <div align="center">
 
-# Pixabay image search
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FFFFFF&center=true&width=435&lines=Pixabay+image+search)](https://git.io/typing-svg)
 
 A simple website to search images on Pixabay
 
